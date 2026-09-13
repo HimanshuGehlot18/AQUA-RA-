@@ -1,0 +1,258 @@
+/* ==========================================================================
+   AQUAÉRA & TGWC — CLIENT CONTACT SECTION & CLEAN FOOTER (RESPONSIVE)
+   ========================================================================== */
+
+.contact-section {
+  position: relative;
+  background: #ffffff;
+  border-top: 1px solid var(--ink-200);
+}
+
+.contact-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.25rem;
+}
+
+@media (min-width: 992px) {
+  .contact-layout-grid {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    align-items: start;
+  }
+}
+
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.direct-channels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.channel-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--ink-200);
+  border-radius: 14px;
+  transition: all 0.25s var(--ease-out-expo);
+}
+
+.channel-card:hover, .channel-card:active {
+  background: var(--green-50);
+  border-color: var(--green-400);
+  transform: translateX(4px);
+}
+
+.channel-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid var(--green-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green-600);
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(5, 150, 105, 0.08);
+}
+
+.channel-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.channel-text h4 {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ink-950);
+  margin-bottom: 0.15rem;
+}
+
+.channel-text p {
+  font-size: 0.84rem;
+  color: var(--ink-600);
+}
+
+/* Contact Form Card */
+.contact-form-card {
+  background: #ffffff;
+  border: 1px solid var(--ink-200);
+  border-radius: 20px;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  box-shadow: var(--card-shadow);
+}
+
+.form-header {
+  margin-bottom: 1.5rem;
+}
+
+.form-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ink-950);
+  margin-bottom: 0.3rem;
+}
+
+.form-header p {
+  font-size: 0.86rem;
+  color: var(--ink-600);
+}
+
+.form-group {
+  margin-bottom: 1.1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-700);
+  margin-bottom: 0.35rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--ink-200);
+  border-radius: 10px;
+  color: var(--ink-900);
+  font-size: 16px !important; /* Prevents auto-zoom on mobile */
+  min-height: 46px;
+  transition: all 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-control:focus {
+  border-color: var(--green-600);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.12);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+}
+
+@media (min-width: 540px) {
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+.form-feedback {
+  margin-top: 1rem;
+  padding: 0.85rem 1.15rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: none;
+}
+
+.form-feedback.success {
+  display: block;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+}
+
+.form-feedback.error {
+  display: block;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+/* ==========================================================================
+   CLEAN FOOTER (RESPONSIVE)
+   ========================================================================== */
+
+.site-footer {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--ink-200);
+  padding: 3rem 0 1.75rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.footer-brand p {
+  font-size: 0.86rem;
+  color: var(--ink-600);
+  max-width: 340px;
+  line-height: 1.55;
+  margin-top: 0.65rem;
+}
+
+.footer-col h5 {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink-950);
+  margin-bottom: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-col a {
+  font-size: 0.86rem;
+  color: var(--ink-600);
+  padding: 0.15rem 0;
+  display: inline-block;
+}
+
+.footer-col a:hover {
+  color: var(--green-600);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--ink-200);
+  font-size: 0.8rem;
+  color: var(--ink-500);
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

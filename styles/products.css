@@ -1,0 +1,291 @@
+/* ==========================================================================
+   AQUAÉRA & TGWC — SECTOR SOLUTIONS & SERVICE GUARANTEE BADGES (RESPONSIVE)
+   ========================================================================== */
+
+.products-section {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--ink-200);
+  border-bottom: 1px solid var(--ink-200);
+}
+
+/* 3 Sector Solutions Grid */
+.three-products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+@media (min-width: 992px) {
+  .three-products-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.product-card {
+  background: #ffffff;
+  border: 1px solid var(--ink-200);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s var(--ease-out-expo);
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--green-400);
+  box-shadow: var(--hover-shadow);
+}
+
+.product-badge-sector {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+  padding: 0.3rem 0.75rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--ink-200);
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--green-700);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+}
+
+/* Machine Image Container */
+.machine-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  background: var(--bg-elevated);
+}
+
+.machine-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease-out-expo);
+}
+
+.product-card:hover .machine-image-wrap img {
+  transform: scale(1.05);
+}
+
+.product-card-body {
+  padding: clamp(1.25rem, 3.5vw, 1.65rem);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2vw, 1.45rem);
+  font-weight: 700;
+  color: var(--ink-950);
+  margin-bottom: 0.25rem;
+  line-height: 1.25;
+}
+
+.product-subtitle {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--green-700);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.75rem;
+}
+
+.product-desc {
+  font-size: 0.88rem;
+  color: var(--ink-600);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+/* ==========================================================================
+   TGWC SERVICE GUARANTEE BADGES (IN EACH PRODUCT)
+   ========================================================================== */
+
+.guarantees-badge-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 0.95rem 1.05rem;
+  background: var(--green-50);
+  border: 1px solid var(--green-100);
+  border-radius: 14px;
+  margin-bottom: 1.25rem;
+}
+
+.guarantee-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-900);
+  line-height: 1.35;
+}
+
+.guarantee-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid var(--green-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green-600);
+  flex-shrink: 0;
+}
+
+.guarantee-icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* Specs List */
+.product-specs-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--ink-100);
+}
+
+.product-specs-list li {
+  font-size: 0.82rem;
+  color: var(--ink-700);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  line-height: 1.35;
+}
+
+.product-specs-list li svg {
+  width: 14px;
+  height: 14px;
+  color: var(--green-600);
+  flex-shrink: 0;
+}
+
+/* Card Action Footer */
+.product-card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--ink-100);
+  flex-wrap: wrap;
+}
+
+.product-yield {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink-950);
+  line-height: 1.1;
+}
+
+.product-yield span {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--ink-500);
+  display: block;
+}
+
+/* ==========================================================================
+   SERVICE ASSURANCE 3-COLUMN HIGHLIGHT SECTION
+   ========================================================================== */
+
+.service-assurance-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .service-assurance-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+}
+
+.assurance-card {
+  background: #ffffff;
+  border: 1px solid var(--ink-200);
+  border-radius: 18px;
+  padding: clamp(1.4rem, 3vw, 1.85rem);
+  box-shadow: var(--card-shadow);
+  text-align: left;
+  transition: border-color 0.25s, transform 0.25s;
+}
+
+.assurance-card:hover {
+  border-color: var(--green-400);
+  transform: translateY(-3px);
+}
+
+.assurance-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--green-50);
+  border: 1px solid var(--green-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green-600);
+  margin-bottom: 1.1rem;
+}
+
+.assurance-icon-box svg {
+  width: 24px;
+  height: 24px;
+}
+
+.assurance-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink-950);
+  margin-bottom: 0.45rem;
+}
+
+.assurance-card p {
+  font-size: 0.88rem;
+  color: var(--ink-600);
+  line-height: 1.55;
+}
+
+/* Mobile Tweak */
+@media (max-width: 480px) {
+  .product-card-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .product-card-footer .product-yield {
+    text-align: center;
+    margin-bottom: 0.35rem;
+  }
+
+  .product-card-footer .btn {
+    width: 100%;
+  }
+}
